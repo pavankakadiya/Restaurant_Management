@@ -12,6 +12,11 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("users")
+    public User Users() {
+        return userService.getUserByUsername("John Doe");
+    }
+
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password) {
         boolean authenticated = userService.authenticate(username, password);
@@ -23,3 +28,4 @@ public class LoginController {
         }
     }
 }
+

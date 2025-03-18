@@ -11,21 +11,30 @@ public class User {
     private Long id;
 
     private String username;
-
+    private String email;
     private String password;
 
     public User() {
     }
 
-    public User(String username, String password) {
+    public User(String username, String email,String password) {
         this.username = username;
         this.password = password;
+        this.email = email;
     }
 
     // Getters and setters
 
     public Long getId() {
         return id;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public void setId(Long id) {
