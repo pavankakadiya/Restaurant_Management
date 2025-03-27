@@ -1,9 +1,10 @@
+//User
 package com.Restaurant_Management.Restaurant_Management.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "waiters")
 public class User {
 
     @Id
@@ -17,6 +18,9 @@ public class User {
     public User() {
     }
 
+    public User(Long id) {
+        this.id = id;
+    }
     public User(String username, String email,String password) {
         this.username = username;
         this.password = password;

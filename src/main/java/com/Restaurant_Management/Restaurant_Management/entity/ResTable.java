@@ -1,3 +1,4 @@
+//ResTabel
 package com.Restaurant_Management.Restaurant_Management.entity;
 
 import jakarta.persistence.*;
